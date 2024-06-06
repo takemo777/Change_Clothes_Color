@@ -1,2 +1,6 @@
 runs/train/weights/best.pt
 runs/train/weights/last.pt
+runs/train/weights/best2.pt
+runs/train/weights/last2.pt
+runs/train/weights/best3.pt
+runs/train/weights/last3.pt
