@@ -50,8 +50,8 @@ else:
     # 対象領域を抽出し、背景を透明にする
     seg_img = cv2.bitwise_and(img_cropped, img_cropped, mask=mask_cropped)
 
-    # 対象領域を512x512にリサイズ
-    img_resized = cv2.resize(seg_img, (512, 512), interpolation=cv2.INTER_AREA)
+    # 対象領域を128x128にリサイズ
+    img_resized = cv2.resize(seg_img, (128, 128), interpolation=cv2.INTER_AREA)
     
     # 透明部分を取り除く
     non_zero_pixels = img_resized[img_resized.sum(axis=2) != 0]
@@ -61,7 +61,7 @@ else:
 
     # リサイズされた画像を表示
     """plt.imshow(cv2.cvtColor(img_resized, cv2.COLOR_BGR2RGB))
-    plt.title("(512x512)")
+    plt.title("(128x128)")
     plt.axis("off")
     plt.show()"""
 
